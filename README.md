@@ -4,7 +4,7 @@ SkyVane is a beautiful, responsive, and dynamic weather dashboard built with Nex
 
 With both dark and light themes and smooth micro-animations, SkyVane focuses on delivering a premium user experience.
 
-![SkyVane Dashboard](public/window.svg) <!-- Replace with an actual screenshot if available -->
+
 
 ## Features
 
