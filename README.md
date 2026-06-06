@@ -1,73 +1,79 @@
-# 🌤️ Skyvane Weather Dashboard
+# SkyVane — Elegant Weather Dashboard
 
-Skyvane is a premium, full-stack weather forecasting dashboard built with **Next.js 14** (App Router) and **Vanilla CSS**. It integrates with the **Weather-AI API** (`https://weather-ai.co`) to deliver real-time meteorological conditions, hourly trends, and a 7-day outlook inside a stunning glassmorphic interface with fluid animations.
+SkyVane is a beautiful, responsive, and dynamic weather dashboard built with Next.js. It provides real-time weather data, an interactive 7-day forecast, hourly condition tracking, and a specialized "Event Planner" tool to assess weather risks for outdoor activities. 
 
----
+With both dark and light themes and smooth micro-animations, SkyVane focuses on delivering a premium user experience.
 
-## ✨ Features
+![SkyVane Dashboard](public/window.svg) <!-- Replace with an actual screenshot if available -->
 
-- **Glassmorphic UI**: High-fidelity, premium visual design incorporating blur effects, smooth gradients, and custom layouts.
-- **Real-Time Data**: Integrates directly with the **Weather-AI API** (Free Tier `/v1/weather` endpoint) for global city forecast retrievals.
-- **Global Search**: Interactive search bar with debounced query suggestions to locate any city or region globally.
-- **Unit Scale Toggle**: Smoothly switches temperatures between Celsius (°C) and Fahrenheit (°F) across all sections.
-- **Fluid Particle Animations**: Custom floating background particle system that runs smoothly client-side.
-- **High-Fidelity Weather Icons**: Dynamic, custom-drawn SVG weather icons mapping WMO weather codes to beautiful, animated meteorological representation.
-- **Mobile First Navigation**: A native-feeling tabbed mobile layout with integrated views:
-  - **Today**: Current hero statistics, hourly forecasts (next 8 hours), and key conditions.
-  - **Forecast**: Compact 7-day meteorological outlook.
-  - **Map**: Radial radar animation scanning localized regions.
-  - **Settings**: System controls for units, coordinates, and active telemetry stations.
+## Features
 
----
+- **Live Weather Data:** Accurate real-time conditions including temperature, "feels like", humidity, wind speed/gusts, UV index, visibility, and more.
+- **Dynamic Location Search:** Search for any city worldwide with autocomplete suggestions.
+- **7-Day Forecast & Hourly Tracking:** Detailed upcoming weather patterns.
+- **Event Planner Tool:** Select an upcoming event (Wedding, Hike, Picnic, etc.) and get an automated risk assessment based on the forecast.
+- **Dark/Light Mode:** Seamlessly toggle between a deep, immersive dark theme and a clean, bright light theme.
+- **Responsive Design:** Fully optimized for both desktop and mobile devices.
+- **Animated Icons:** Custom SVG weather icons with smooth CSS animations (rotating suns, drifting clouds, falling rain).
 
-## 🚀 Tech Stack
+## Technologies Used
 
-- **Core**: [Next.js 14](https://nextjs.org/) (App Router), [React](https://react.dev/)
-- **Styling**: Modern Vanilla CSS with HSL-defined custom variables, responsive design, and CSS transitions
-- **API Services**:
-  - **Weather-AI API** (`/v1/weather`): For current weather conditions, daily forecasts, and hourly trends.
-  - **Geocoding API**: For real-time city suggestions and coordinates lookup.
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **UI Library:** [React](https://reactjs.org/)
+- **Styling:** Vanilla CSS with custom CSS variables for theming and animations
+- **Weather API:** [Weather-AI API](https://api.weather-ai.co)
+- **Geocoding API:** [Open-Meteo Geocoding API](https://open-meteo.com/en/docs/geocoding-api) (for location search)
 
----
+## Getting Started
 
-## 🛠️ Getting Started
+Follow these instructions to set up the project locally.
 
-### 1. Prerequisites
-Ensure you have **Node.js** (v18.x or later) installed on your machine.
+### Prerequisites
 
-### 2. Set Up Environment Variables
-Sign up at [Weather-AI](https://weather-ai.co) to get your free API key.
+- [Node.js](https://nodejs.org/) (v18.0.0 or higher recommended)
+- npm (or yarn/pnpm)
+- A free API key from [Weather-AI](https://api.weather-ai.co)
 
-Create a `.env.local` file in the root of the project (or copy `.env.example`):
-```bash
-cp .env.example .env.local
-```
+### Installation
 
-Open `.env.local` and add your API key:
-```env
-WEATHER_AI_API_KEY=your_weather_ai_api_key_here
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/theweirdguyyy/SkyVane.git
+   cd SkyVane
+   ```
 
-### 3. Install Dependencies
-Install all package dependencies using npm:
-```bash
-npm install
-```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-### 4. Run Locally
-Start the Next.js local development server:
-```bash
-npm run dev
-```
+3. **Set up environment variables:**
+   - Copy the `.env.example` file to create a new `.env.local` file:
+     ```bash
+     cp .env.example .env.local
+     ```
+   - Open `.env.local` and add your Weather-AI API key:
+     ```env
+     WEATHER_AI_API_KEY=your_actual_api_key_here
+     ```
 
-Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
+4. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
----
+5. **Open the app:**
+   Navigate to [http://localhost:3000](http://localhost:3000) in your browser to see the dashboard in action.
 
-## 🏗️ Production Build
-To compile a production build of the application:
+## Building for Production
+
+To create an optimized production build:
+
 ```bash
 npm run build
 npm start
 ```
-This builds standard Next.js optimized bundles with all Dynamic API routes configured.
+
+## License
+
+This project is licensed under the MIT License.
