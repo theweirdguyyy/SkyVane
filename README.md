@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌤️ Skyvane Weather Dashboard
 
-## Getting Started
+Skyvane is a premium, full-stack weather forecasting dashboard built with **Next.js 14** (App Router) and **Vanilla CSS**. It integrates with the **Weather-AI API** (`https://weather-ai.co`) to deliver real-time meteorological conditions, hourly trends, and a 7-day outlook inside a stunning glassmorphic interface with fluid animations.
 
-First, run the development server:
+---
 
+## ✨ Features
+
+- **Glassmorphic UI**: High-fidelity, premium visual design incorporating blur effects, smooth gradients, and custom layouts.
+- **Real-Time Data**: Integrates directly with the **Weather-AI API** (Free Tier `/v1/weather` endpoint) for global city forecast retrievals.
+- **Global Search**: Interactive search bar with debounced query suggestions to locate any city or region globally.
+- **Unit Scale Toggle**: Smoothly switches temperatures between Celsius (°C) and Fahrenheit (°F) across all sections.
+- **Fluid Particle Animations**: Custom floating background particle system that runs smoothly client-side.
+- **High-Fidelity Weather Icons**: Dynamic, custom-drawn SVG weather icons mapping WMO weather codes to beautiful, animated meteorological representation.
+- **Mobile First Navigation**: A native-feeling tabbed mobile layout with integrated views:
+  - **Today**: Current hero statistics, hourly forecasts (next 8 hours), and key conditions.
+  - **Forecast**: Compact 7-day meteorological outlook.
+  - **Map**: Radial radar animation scanning localized regions.
+  - **Settings**: System controls for units, coordinates, and active telemetry stations.
+
+---
+
+## 🚀 Tech Stack
+
+- **Core**: [Next.js 14](https://nextjs.org/) (App Router), [React](https://react.dev/)
+- **Styling**: Modern Vanilla CSS with HSL-defined custom variables, responsive design, and CSS transitions
+- **API Services**:
+  - **Weather-AI API** (`/v1/weather`): For current weather conditions, daily forecasts, and hourly trends.
+  - **Geocoding API**: For real-time city suggestions and coordinates lookup.
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Prerequisites
+Ensure you have **Node.js** (v18.x or later) installed on your machine.
+
+### 2. Set Up Environment Variables
+Sign up at [Weather-AI](https://weather-ai.co) to get your free API key.
+
+Create a `.env.local` file in the root of the project (or copy `.env.example`):
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cp .env.example .env.local
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `.env.local` and add your API key:
+```env
+WEATHER_AI_API_KEY=your_weather_ai_api_key_here
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Install Dependencies
+Install all package dependencies using npm:
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 4. Run Locally
+Start the Next.js local development server:
+```bash
+npm run dev
+```
 
-## Learn More
+Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🏗️ Production Build
+To compile a production build of the application:
+```bash
+npm run build
+npm start
+```
+This builds standard Next.js optimized bundles with all Dynamic API routes configured.
